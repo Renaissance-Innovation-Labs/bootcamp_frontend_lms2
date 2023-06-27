@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;800&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    Login page should be done here
-  </body>
+</head>
+<body>
+    <div class="header">
+        <img src="assets/login assets/Logo.png">
+        <div class="border-bottom"></div>
+    </div>
+    <div class="body">
+    <h2>Welcome Back</h2>
+    <p>Welcome back! please enter your details</p>
+    <form class="form">
+        <p>Email Address</p>
+        <input type="email" placeholder="Myschoolemail.edu.ng" class="email">
+        <p id="password">Password</p>
+        <div>
+        <input type="password" class="hidden">
+        <img src="assets/login assets/eye-slash.png" class="eye">
+    </div>
+        <h3>Forgot Password?</h3>
+        <button type="submit">Login</button>
+    </form>
+    <p class="span">Don't have an account? <a href="./pages/signup.html">Sign Up</a></p>
+</div>
+<div class="icons">
+    <img src="assets/login assets/Idea.png" class="light">
+    <img src="assets/login assets/business letter documents and pencil.png" class="documents">
+    <img src="assets/login assets/code.png" class="code">
+    <img src="assets/login assets/Zoom.png" class="zoom">
+    <img src="assets/login assets/Bookmark.png" class="bookmark">
+</div>
+</body>
 </html>
