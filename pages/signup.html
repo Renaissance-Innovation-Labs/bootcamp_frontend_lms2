@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/f5f2c0c41d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;800&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/signup.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>sign up</title>
 </head>
 <body>
     <div class="header">
@@ -19,40 +20,48 @@
         <p>Please fill the form to create a student account</p>
         <form class="form">
             <div>
-                <h3>First Name</h3>
+                <label>First Name</label>
                 <input type="text" placeholder="Jane">
             </div>
             <div>
-                <h3>Last Name</h3>
+                <label>Last Name</label>
                 <input type="text" placeholder="Doe">
             </div>
             <div>
-                <h3>Email Address</h3>
+                <label>Email Address</label>
                 <input type="email" placeholder="Myschoolemail.edu">
             </div>
             <div>
-                <h3>Phone Number</h3>
+                <label>Phone Number</label>
                 <input type="number" placeholder="090311223344">
             </div>
-            <div>
-                <h3>Password</h3>
-                <input type="password" placeholder="********" class="password">
-                <h4>(Password should be up to 8 characters)</h4>
+            <div class="password">
+                <label>Password</label>
+                <input type="password" placeholder="********" >
+                <span><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
+                <h3>(Password should be up to 8 characters)</h3>
             </div>
-            <div>
-                <h3>Confirm Password</h3>
-                <input type="password" placeholder="********">
+            <div class="password">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="********" >
+                <span><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
             </div>
         </form>
-        <div class="checkbox"><input type="checkbox" ><p>I acccept terms and conditions</p>
+        <div class="checkbox">
+            <div class="conditions">
+            <span> <input type="checkbox" ></span><p>I acccept terms and conditions</p></div>
         </div>
         <button type="submit">Sign Up</button>
-    </div>
-    <p class="span">Already have an account? <a href="../index.html">Sign In</a></p>
-    <img src="../assets/sign up assets/Idea.png" class="light">
+        <div class="icons">
+            <img src="../assets/sign up assets/Idea.png" class="light">
     <img src="../assets/sign up assets/Classroom.png" class="class">
     <img src="../assets/sign up assets/Timetable.png" class="time">
     <img src="../assets/sign up assets/Zoom.png" class="zoom">
+    </div>
+    </div>
+    <p class="span">Already have an account? <a href="../">Sign Up</a></p>
+    
+    
 </body>
 <script src="script.js"></script>
 </html>
