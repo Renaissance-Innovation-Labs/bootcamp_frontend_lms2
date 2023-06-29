@@ -7,13 +7,10 @@ font-family: 'Poppins', sans-serif;
 
 body{
     background: #031837;
-    height: fit-content;
     height: 100%;
 }
 
 .header img{
-    width: 150px;
-    height: 50px;
     color: #fff;
     font-weight: 900;
     font-size: 21px;
@@ -48,7 +45,7 @@ text-align: center;
 
 .body p{
     color: #FFF;
-font-size: 10px;
+font-size: 18px;
 font-family: Source Sans 3;
 text-align: center;
 }
@@ -59,13 +56,14 @@ text-align: center;
     text-align: center;
     margin: auto;
     margin-top: 70px;
-    width: 100%;
+    width: 90%;
 }
 
-.form h3{
+.form label{
+    display: inline-block;
     text-align: left;
-    margin-left: 15px;
-    font-size: 10px;
+    width: 92%;
+    font-size: 18px;
     color: var(--gray-5, #E0E0E0);
     margin-bottom: 5px;
 }
@@ -81,36 +79,73 @@ text-align: center;
     margin-bottom: 30px;
 }
 
-.form h4{
+.form input :placeholder-shown{
+    font-size: 18px;
+}
+
+.password{
+    position: relative;
+}
+
+.password span{
+    position: absolute;
+    right: 6%;
+    top: 40%;
+    color: white;
+    cursor: pointer;
+}
+
+.password h3{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    font-size: 10px;
+    color: var(--gray-5, #E0E0E0);
+    margin: 0;
+    width: 92%;
+    bottom: 100%;
     display: none;
-    color: #FFF;
-font-size: 16px;
-font-family: Source Sans 3;
-letter-spacing: -0.32px;
+}
+
+.conditions{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+display: flex;
 text-align: left;
-align-items: start;
-margin: 0;
-padding-left: 20px;
+margin-top: 2%;
 }
 
-.checkbox{
+.checkbox {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    border-radius: 8px;
-    margin: 20px;
+    align-items: flex-start;
 }
 
-.checkbox p{
-    color: #FFF;
-font-size: 16px;
-font-family: Source Sans 3;
+.checkbox input {
+    margin-top: 5px;
+    margin-right: 5px;
+    align-self: flex-start;
 }
+
+.checkbox p {
+    text-align: left;
+    align-self: flex-start;
+    color: #FFF7;
+    font-size: 16px;
+    margin: 0;
+}
+
 
 button{
     width: 292px;
     padding: 16px 32px;
     align-items: center;
     gap: 4px;
+    font-size: 18px;
     background: #197ED2;
     border-radius: 8px;
     margin-top: 40px;
@@ -141,14 +176,14 @@ button{
     .form{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
         justify-content: center;
         align-items: center;
         text-align: center;
         margin: auto;
         margin-top: 70px;
-        width: 50%;
+        width: 30%;
         justify-content: space-evenly;
-        gap:30px ;
     }
     .form input{
         width: 350px;
@@ -161,87 +196,47 @@ button{
         margin-bottom: 30px;
     }
 
-    .password{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 25px;
-    }
-
-    .form h4{
-        display:block;
-        color: #FFF;
-    font-size: 16px;
-    font-family: Source Sans 3;
-    letter-spacing: -0.32px;
-    text-align: left;
-    align-items: start;
-    margin: 0;
-    padding-left: 20px;
-    margin-top: 0;
+    .password h3{
+        position: absolute;
+        display: inline-block;
+        text-align: left;
+        font-size: 14px;
+        color: var(--gray-5, #E0E0E0);
+        margin: 0;
+        right: 8%;
+        top: 77%;
     }
 }
 
 
 @media screen and (min-width: 1024px){
-    .checkbox{
-        padding-left: 130px;
-    }
-
-    .light{
-        position: relative;
+    .icons{
         display: block;
-        left: 60px;
-        bottom: 700px;
-        width: 94px;
-        height: 94px;
+    }
+    .light{
+        position: absolute;
+        display: block;
+        bottom: 70%;
+        left: 10%;
 
     } 
     .class{
-        position: relative;
-            display: block;
-            left: 30px;
-            bottom: 100px;
-            width: 94px;
-            height: 94px;
+        position: absolute;
+        display: block;
+        bottom: 10%;
+        left: 5%;
     } 
     .zoom{
-        position: relative;
+        position: absolute;
         display: block;
-        left: 900px;
-        bottom: 900px;
-        width: 94px;
-        height: 94px;
+        right: 5%;
+        bottom: 75%;
     } 
     .time{
-        position: relative;
+        position: absolute;
         display: block;
-        left: 800px;
-    bottom: 350px;
-    width: 94px;
-    height: 94px;
+        left: 90%;
+        bottom: -5%;
     }
 }
 
-@media screen and (min-width: 1440px){
-    .zoom{
-        position: relative;
-        display: block;
-        left: 1250px;
-        bottom: 900px;
-        width: 94px;
-        height: 94px;
-    } 
-
-    .time{
-        position: relative;
-        display: block;
-        left: 1000px;
-    bottom: 350px;
-    width: 94px;
-    height: 94px;
-    }
-
-    .checkbox{
-        padding-left: 350px;
-    }
-}
