@@ -169,6 +169,7 @@ background: #0F2B55;
     position: fixed;
     bottom: 10px;
     left: 50px;
+    width: 20px;
 }
 .footericon2{
     position: fixed;
@@ -183,7 +184,7 @@ background: #0F2B55;
 .footericon4{
     position: fixed;
     bottom: 10px;
-    left: 380px;
+    left: 360px;
 }
 .footer img {
     margin-bottom: 10px;
@@ -256,7 +257,7 @@ background-color: none;
   .toggle-icon {
     position: absolute;
     top: 50%;
-    right: 25px;
+    right: -15px;
     transform: translateY(-50%);
     cursor: pointer;
     color: white;
@@ -274,6 +275,9 @@ background-color: none;
 @media only screen and (min-width:1204px){
       .first-logo{
         display: none;
+    }
+    .toggle-icon{
+        right: 25px;
     }
     .side-bar{
         background-color: #031837;
@@ -357,7 +361,7 @@ background-color: none;
 }
 .first, .last, .new-pass, .confirm-pass{
     margin-top: 5px;
-    padding: 10px;
+    padding: 30px;
     width: 400px;
     border-radius: 8px;
     border-color: #A8A8A8;
@@ -370,7 +374,7 @@ background-color: none;
 }
 .form{
     margin: 10px;
-    padding-left: 30px;
+    margin-right: 10px;
 }
 @media only screen and (min-width:1204px){
     .form{
