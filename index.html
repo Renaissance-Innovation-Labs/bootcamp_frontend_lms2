@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/f5f2c0c41d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;800&family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/login.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>log in</title>
   </head>
   <body>
-    Login page should be done here
+    <div class="header">
+      <img src="./assets/login assets/Logo.png" />
+      <div class="border-bottom"></div>
+    </div>
+    <div class="body">
+      <h2>Welcome Back</h2>
+      <p>Welcome back! please enter your details</p>
+      <form class="form">
+        <label>Email Address</label>
+        <input type="email" placeholder="Myschoolemail.edu.ng" class="email" />
+        <div class="password">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="********" />
+          <span><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
+          <span class="forgot">Forgot Password?</span>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+      <div class="icons">
+        <img src="./assets/login assets/Idea.png" class="light" />
+        <img src="./assets/login assets/code.png" class="code" />
+        <img src="./assets/login assets/Zoom.png" class="zoom" />
+        <img src="./assets/login assets/Bookmark.png" class="bookmark" />
+      </div>
+      <p class="span">
+        Don't have an account? <a href="./pages/signup.html">Sign Up</a>
+      </p>
+    </div>
   </body>
 </html>
