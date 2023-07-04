@@ -18,40 +18,37 @@
     <div class="body">
         <h3>Hello there,</h3>
         <p>Please fill the form to create a student account</p>
-        <form class="form">
+        <form id="form">
             <div>
-                <label>First Name</label>
-                <input type="text" placeholder="Jane">
+                <label for="name">First Name</label>
+                <input type="text" placeholder="Jane" class="first-name" required>
             </div>
             <div>
-                <label>Last Name</label>
-                <input type="text" placeholder="Doe">
+                <label for="name" class="lname">Last Name</label>
+                <input type="text" placeholder="Doe" class="last-name" required>
             </div>
             <div>
-                <label>Email Address</label>
-                <input type="email" placeholder="Myschoolemail.edu">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Myschoolemail.edu" class="email" required>
             </div>
             <div>
-                <label>Phone Number</label>
-                <input type="number" placeholder="090311223344">
+                <label for="email" class="phone"> Phone Number</label>
+                <input type="tel" placeholder="09031122333" class="phone-number" required>
             </div>
-            <div class="password">
+            <div class="passcode">
                 <label>Password</label>
-                <input type="password" placeholder="********" >
-                <span><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
+                <input type="password" placeholder="********" class="password" required>
+                <span class="toggle-password"><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
                 <h3>(Password should be up to 8 characters)</h3>
             </div>
-            <div class="password">
-                <label>Confirm Password</label>
-                <input type="password" placeholder="********" >
-                <span><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
+            <div class="passcode">
+                <label class="con">Confirm Password</label>
+                <input type="password" placeholder="********" class="cpassword" required>
+                <span class="toggle-password"><i class="fa-sharp fa-regular fa-eye-slash"></i></span>
             </div>
+            <button type="submit" class="button">Sign Up</button>
         </form>
-        <div class="checkbox">
-            <div class="conditions">
-            <span> <input type="checkbox" ></span><p>I acccept terms and conditions</p></div>
-        </div>
-        <button type="submit">Sign Up</button>
+        
         <div class="icons">
             <img src="../assets/sign up assets/Idea.png" class="light">
     <img src="../assets/sign up assets/Classroom.png" class="class">
@@ -59,9 +56,9 @@
     <img src="../assets/sign up assets/Zoom.png" class="zoom">
     </div>
     </div>
-    <p class="span">Already have an account? <a href="../">Sign Up</a></p>
+    <p class="span">Already have an account? <a href="/index.html">Log In</a></p>
     
     
 </body>
-<script src="script.js"></script>
+<script src="/javascript/signup.js"></script>
 </html>
