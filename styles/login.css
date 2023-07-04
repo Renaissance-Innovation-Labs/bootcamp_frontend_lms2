@@ -1,33 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: #031837;
     height: fit-content;
 }
 
-.header img{
+.header img {
     color: #fff;
     font-weight: 900;
     font-size: 21px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
-.border-bottom{
+.border-bottom {
     border-bottom: 1px solid #ffff;
     width: 100%;
     padding: 0 10px;
     margin-top: 5px;
 }
 
-.body{
+.body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -35,21 +35,21 @@ body{
     text-align: center;
 }
 
-.body h2{
+.body h2 {
     color: #FFF;
     font-weight: 600;
     font-size: 24px;
     text-align: center;
 }
 
-.body p{
+.body p {
     color: #FFF;
     font-size: 16px;
     margin-top: 10px;
     text-align: center;
 }
 
-.form{
+.form {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -58,7 +58,7 @@ body{
     width: 100%;
 }
 
-.form label{
+.form label {
     display: inline-block;
     text-align: left;
     width: 92%;
@@ -67,7 +67,7 @@ body{
     margin-bottom: 5px;
 }
 
-.form input{
+.form input {
     width: 92%;
     align-items: center;
     padding: 16px;
@@ -78,15 +78,15 @@ body{
     margin-bottom: 30px;
 }
 
-.form input :placeholder-shown{
+.form input :placeholder-shown {
     font-size: 18px;
 }
 
-.password{
+.password {
     position: relative;
 }
 
-.password span{
+.password span {
     position: absolute;
     right: 6%;
     top: 40%;
@@ -95,7 +95,7 @@ body{
 }
 
 
-.password .forgot{
+.password .forgot {
     color: #197ED2;
     font-size: 16px;
     position: absolute;
@@ -104,10 +104,10 @@ body{
     margin: 0;
     width: 90%;
     top: 80%;
-    
-    }
 
-.form button{
+}
+
+.form button {
     width: 292px;
     padding: 16px 32px;
     align-items: center;
@@ -121,25 +121,25 @@ body{
 }
 
 
-.span{
+.span {
     color: #E0E0E0;
     font-size: 18px;
     margin-top: 5px;
     align-items: center;
 }
 
-.span a{
-    color:#197ED2 ;
+.span a {
+    color: #197ED2;
     text-decoration: none;
 }
 
-.icons{
+.icons {
     display: none;
 }
 
 
-@media screen and (min-width: 768px){
-    .form{
+@media screen and (min-width: 768px) {
+    .form {
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -147,10 +147,10 @@ body{
         margin-top: 70px;
         width: 60%;
     }
-    }
+}
 
-@media screen and (min-width: 1024px){
-    .form{
+@media screen and (min-width: 1024px) {
+    .form {
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -158,11 +158,12 @@ body{
         margin-top: 70px;
         width: 50%;
     }
-    .icons{
+
+    .icons {
         display: block;
     }
 
-    .light{
+    .light {
         position: absolute;
         position: absolute;
         display: block;
@@ -170,27 +171,27 @@ body{
         left: 10%;
     }
 
-.code{
-    position: absolute;
-    display: block;
-    right: 10%;
-    bottom: 70%;
-} 
+    .code {
+        position: absolute;
+        display: block;
+        right: 10%;
+        bottom: 70%;
+    }
 
-.zoom{
-    display: block;
-    position: absolute;
-    position: absolute;
-    display: block;
-    left: 80%;
-    bottom: -8%;
-}
-.bookmark{
-    position: absolute;
-    display: block;
-    bottom: 10%;
-    left: 5%;
-}
+    .zoom {
+        display: block;
+        position: absolute;
+        position: absolute;
+        display: block;
+        left: 80%;
+        bottom: -8%;
+    }
+
+    .bookmark {
+        position: absolute;
+        display: block;
+        bottom: 10%;
+        left: 5%;
+    }
 
 }
-
