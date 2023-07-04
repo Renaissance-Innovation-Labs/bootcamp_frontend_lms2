@@ -19,7 +19,7 @@ form.addEventListener("submit", function(event) {
     phone: phoneNumber.value
   };
 
-  if (password.value === cpassword.value) {
+  if (password.value === cpassword.value && password.value.length >= 8 && phoneNumber.value.length === 11 && password.value !== "" && phoneNumber.value !== "") {
     fetch('https://lms-boo.onrender.com/users', {
       method: 'post',
       body: JSON.stringify(createPayload),
