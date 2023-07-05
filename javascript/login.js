@@ -26,7 +26,8 @@ loginForm.addEventListener('submit', function(event) {
     .then(data => {
       console.log('Login successful', data);
       const user = {
-        "access_token": data.access_token,
+          "token": data.access_token,
+          "token type": data.token_type,
           "firstname": data.user.firstname,
           "lastname": data.user.lastname,
           "email": data.user.email,
@@ -34,7 +35,7 @@ loginForm.addEventListener('submit', function(event) {
           "id": data.user.id,
       };
       sessionStorage.setItem('User', JSON.stringify(user));
-     // window.location.href = '../pages/dashboard.html';
+      window.location.href = '../pages/dashboard.html';
     })
     .catch((error) => {
       console.log(error);
