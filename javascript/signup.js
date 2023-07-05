@@ -10,7 +10,7 @@ const button = document.querySelector('button')
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
-  button.textContent = 'Loading...';
+  button.textContent = 'Creating Account...';
 
   const createPayload = {
     firstname: firstName.value,
@@ -31,12 +31,16 @@ form.addEventListener("submit", function(event) {
       .then((response) => response.json())
       .then((res) => {
         console.log({ res });
-        alert('Registration successful. Please Log In.');
         window.location.href = '/index.html'; 
       })
-      .catch((error) => console.log(error));
-  } else {
-    console.log('password must match');
+      .catch((error) =>{
+      console.log(error);
+      alert('Sign up unsuccessful!, Please try again');
+      button.textContent = 'Sign Up';
+      });
+    }else {
+    alert('password must match');
+    button.textContent = 'Sign Up'
   }
 });
 

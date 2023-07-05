@@ -27,17 +27,14 @@ loginForm.addEventListener('submit', function(event) {
       console.log('Login successful', data);
       const user = {
         "access_token": data.access_token,
-        "token_type": data.token_type,
-        "user": {
           "firstname": data.user.firstname,
           "lastname": data.user.lastname,
           "email": data.user.email,
           "phone": data.user.phone,
           "id": data.user.id,
-        }
       };
-      sessionStorage.setItem('payload', JSON.stringify(user));
-      window.location.href = '../pages/dashboard.html';
+      sessionStorage.setItem('User', JSON.stringify(user));
+     // window.location.href = '../pages/dashboard.html';
     })
     .catch((error) => {
       console.log(error);
