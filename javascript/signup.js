@@ -30,17 +30,16 @@ form.addEventListener("submit", function(event) {
     })
       .then((response) => response.json())
       .then((res) => {
-        console.log({ res });
+        button.textContent = 'Sign Up'
         window.location.href = '/index.html'; 
       })
       .catch((error) =>{
-      console.log(error);
       alert('Sign up unsuccessful!, Please try again');
       button.textContent = 'Sign Up';
       });
     }else {
     alert('password must match');
-    button.textContent = 'Sign Up'
+
   }
 });
 
