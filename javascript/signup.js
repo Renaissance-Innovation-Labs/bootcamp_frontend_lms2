@@ -1,4 +1,3 @@
-
 const form = document.querySelector('#form');
 
 const firstName = document.querySelector('.first-name');
@@ -7,9 +6,11 @@ const email = document.querySelector('.email');
 const phoneNumber = document.querySelector('.phone-number');
 const password = document.querySelector('.password');
 const cpassword = document.querySelector('.cpassword');
+const button = document.querySelector('button')
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
+  button.textContent = 'Loading...';
 
   const createPayload = {
     firstname: firstName.value,
@@ -28,7 +29,11 @@ form.addEventListener("submit", function(event) {
       },
     })
       .then((response) => response.json())
-      .then((res) => console.log({ res }))
+      .then((res) => {
+        console.log({ res });
+        alert('Registration successful. Please Log In.');
+        window.location.href = '/index.html'; 
+      })
       .catch((error) => console.log(error));
   } else {
     console.log('password must match');
