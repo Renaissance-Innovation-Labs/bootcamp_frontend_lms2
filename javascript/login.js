@@ -1,9 +1,11 @@
 const loginForm = document.querySelector('.form');
 const loginEmail = document.querySelector('.email');
 const loginPassword = document.querySelector('.password-field');
+const button = document.querySelector('.button');
 
 loginForm.addEventListener('submit', function(event) {
   event.preventDefault();
+  button.textContent = 'Loading...';
 
   const loginPayload = {
     email: loginEmail.value,
@@ -23,7 +25,7 @@ loginForm.addEventListener('submit', function(event) {
     .then((response) => response.json())
     .then(data => {
       console.log('Login successful', data);
-      const payload = {
+      const user = {
         "access_token": data.access_token,
         "token_type": data.token_type,
         "user": {
@@ -34,12 +36,18 @@ loginForm.addEventListener('submit', function(event) {
           "id": data.user.id,
         }
       };
-      sessionStorage.setItem('payload', JSON.stringify(payload));
+      sessionStorage.setItem('payload', JSON.stringify(user));
       window.location.href = '../pages/dashboard.html';
     })
-    .catch((error) => console.log(error));
-
+    .catch((error) => {
+      console.log(error);
+      alert('Login unsuccessful!, please enter the correct username and password');
+      button.textContent = 'Log In';
+    });
+  } else {
     console.log('Please enter both email and password.');
+    alert('please enter the correct username and password')
+    button.textContent = 'Log In'
   }
 });
 
