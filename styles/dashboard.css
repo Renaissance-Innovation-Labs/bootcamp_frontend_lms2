@@ -1497,7 +1497,7 @@ padding-left: 60px;
     
     .cour{
         display: flex;
-        width: 63%;
+        width: 64%;
         justify-content: space-between;
     }
     
@@ -1544,7 +1544,7 @@ padding-left: 60px;
     }
     
     .go{
-        margin-top: -40px;
+        margin-top: 0px;
         width: 150px;
     height: 37px;
     border-radius: 6px;
@@ -1614,11 +1614,11 @@ padding-left: 60px;
     }
     
     #pol{
-        margin-left: -55px;
+        margin-left: -61px;
     }
     
     #poly{
-        margin-left: -40px;
+        margin-left: -37px;
     }
     
     .polygon{
