@@ -33,7 +33,7 @@
             </ul>
             <div class="side-profile">
               <img src="../assets/dashboardassets/User.png">
-              <p>Jane Doe</p>
+              <p class="user">Jane Doe</p>
               <a href="#">
                 <img src="../assets/dashboardassets/Settings.png" alt="log out" class="log-out">Log out
               </a>
@@ -53,15 +53,16 @@
      <div class="text-img">
         <img src="../assets/Male User.png" class="logo-m">
         <div>   
-        <h3 class="text"> Jane Doe</h3> <p class="text">janedoe@gmail.com</p>
+        <h3 class="text profile"> Jane Doe</h3> <p class="text mail">janedoe@gmail.com</p>
         </div> 
     </div>
     
         <div class="information">
-    <div class="personal-information">
-       <h3 class="info"> Personal Information</h3>
-    </div>
+   
     <form class="form">
+      <div class="personal-information">
+        <h3 class="info"> Personal Information</h3>
+      </div>
         <div>
        <p class="text">First Name</p>
        <input type="text" required class="first" placeholder="Jane">
@@ -70,8 +71,18 @@
        <p class="text">Last Name</p>
        <input type="text" required class="last" placeholder="Doe">  
     </div>
-    
-       
+    <div>
+    <p class="text">Phone Number</p>
+    <input type="tel" required class="phone-no" placeholder="08012345678">
+  </div>
+       <div class="submit">
+      <button class="changes"> Save Changes</button>
+       </div>
+  </form>
+  <form class="form-pass">
+     <div class="personal-information">
+      <h3 class="info"> Change Password</h3>
+     </div>
        <div class="password">
         <p class="text">New Password<p>
        <input type="password" required class="new-pass" placeholder="********">
@@ -83,11 +94,11 @@
                 <i class="toggle-icon fa fa-eye-slash" aria-hidden="true"></i>
             </div>
          </div>
-    </form>
-        <div class="submit">
-            <button class="changes"> Save Changes</button>
-            
-        </div>
+         <div class="submit">
+          <button class="changes"> Change Password</button>
+           </div>
+  </form>
+        
        </div>
    </div> 
        <footer class="footer">
