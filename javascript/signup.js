@@ -1,12 +1,12 @@
 const form = document.querySelector('#form');
-
 const firstName = document.querySelector('.first-name');
 const lastName = document.querySelector('.last-name');
 const email = document.querySelector('.email');
 const phoneNumber = document.querySelector('.phone-number');
 const password = document.querySelector('.password');
 const cpassword = document.querySelector('.cpassword');
-const button = document.querySelector('button')
+const button = document.querySelector('button');
+const checkbox = document.querySelector('.checkbox-input');
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
@@ -20,7 +20,23 @@ form.addEventListener("submit", function(event) {
     phone: phoneNumber.value
   };
 
-  if (password.value === cpassword.value && password.value.length >= 8 && phoneNumber.value.length === 11 && password.value !== "" && phoneNumber.value !== "") {
+  if (password.value !== cpassword.value) {
+    alert('Passwords do not match.');
+    button.textContent = 'Sign Up';
+    return;
+  } else if (password.value.length < 8) {
+    alert('Password should be at least 8 characters long.');
+    button.textContent = 'Sign Up';
+    return;
+  } else if (phoneNumber.value.length !== 11) {
+    alert('Phone number should be 11 digits long.');
+    button.textContent = 'Sign Up';
+    return;
+  } else if (!checkbox.checked) {
+    alert('Please agree to the terms and conditions.');
+    button.textContent = 'Sign Up';
+    return;
+  } else {
     fetch('https://lms-boo.onrender.com/users', {
       method: 'post',
       body: JSON.stringify(createPayload),
@@ -30,16 +46,13 @@ form.addEventListener("submit", function(event) {
     })
       .then((response) => response.json())
       .then((res) => {
-        button.textContent = 'Sign Up'
+        button.textContent = 'Sign Up';
         window.location.href = '/index.html'; 
       })
-      .catch((error) =>{
-      alert('Sign up unsuccessful!, Please try again');
-      button.textContent = 'Sign Up';
+      .catch((error) => {
+        alert('Sign up unsuccessful! Please try again.');
+        button.textContent = 'Sign Up';
       });
-    }else {
-    alert('password must match');
-
   }
 });
 
@@ -60,7 +73,6 @@ const togglePasswordVisibility = (event) => {
     icon.classList.add('fa-eye-slash');
   }
 };
-
 togglePasswordIcons.forEach((icon) => {
   icon.addEventListener('click', togglePasswordVisibility);
 });
