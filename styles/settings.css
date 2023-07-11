@@ -82,10 +82,16 @@ font-family: 'Poppins', sans-serif;
     color: #FFF;
     padding-left: 280px;
 }
+.success-message{
+    color: green;
+}
 .logoimage{
     margin: auto;
     padding-left: 30px;
     padding-top: 40px;
+  }
+  .error-message{
+    color: red;
   }
   .dash{
     margin-bottom: -7px;
