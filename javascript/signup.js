@@ -36,7 +36,13 @@ form.addEventListener("submit", function(event) {
     alert('Please agree to the terms and conditions.');
     button.textContent = 'Sign Up';
     return;
-  } else {
+  }
+  else if (!isValidEmail(email.value)) {
+    alert('Invalid email address.');
+    button.textContent = 'Sign Up';
+    return;
+  }
+  else {
     fetch('https://lms-boo.onrender.com/users', {
       method: 'post',
       body: JSON.stringify(createPayload),
@@ -56,6 +62,10 @@ form.addEventListener("submit", function(event) {
   }
 });
 
+function isValidEmail(email) {
+  const emailv = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailv.test(email);
+}
 const togglePasswordIcons = document.querySelectorAll('.toggle-password');
 const passwordInputs = document.querySelectorAll('input[type="password"]');
 
