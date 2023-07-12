@@ -126,13 +126,15 @@ margin-top: 2%;
 
 .checkbox{
     position: relative;
-    display: none;
+    text-align: left;
+    align-items: start;
+  /*  display: none;*/
 }
 
 .checkbox-input{
     position: absolute;
-    right: 180%;
-    top: 88%;
+    right: 75%;
+    top: 80%;
     color: white;
     cursor: pointer;
 }
@@ -140,10 +142,31 @@ margin-top: 2%;
 .checkbox-p{
     position: relative;
     color: white;
-    right: 139%;
-    margin-top: 47%;
+    right: 15%;
+    margin-top: 25%;
     cursor: pointer;
     font-size: 16px;
+}
+
+.checkbox-p::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid white;
+    margin-top: 0px;
+    width: 70%;
+    margin-left: 30%;
+}
+
+@media screen and (min-width: 375px) and (max-width: 420px){
+    .checkbox-input{
+        right: 60%;
+        top: 80%;
+    }
+    
+    .checkbox-p{
+        right: 4%;
+        margin-top: 25%;
+    }
 }
 
 .button{
@@ -156,7 +179,7 @@ margin-top: 2%;
     font-size: 18px;
     background: #197ED2;
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 60px;
     border: none;
     color: #FFF;
     margin-bottom: 30px;
@@ -227,6 +250,28 @@ margin-top: 2%;
     .checkbox{
         position: relative;
         display: block;
+    }
+
+    /*.checkbox{
+        position: relative;
+        display: none;
+    }*/
+    
+    .checkbox-input{
+        position: absolute;
+        right: 180%;
+        top: 88%;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .checkbox-p{
+        position: relative;
+        color: white;
+        right: 139%;
+        margin-top: 47%;
+        cursor: pointer;
+        font-size: 16px;
     }
 
     .button{
