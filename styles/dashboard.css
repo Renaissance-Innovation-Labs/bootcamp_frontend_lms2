@@ -562,7 +562,7 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-left: 38px;
+    margin-left: 25px;
     margin-top: 90px;
 }
 
@@ -572,7 +572,7 @@ body{
 }
 
 .let{
-    margin-left: 38px;
+    margin-left: 25px;
     font-size: 19px;
     font-weight: 400;
     color: #D6D6D6;
@@ -661,19 +661,19 @@ border: 1px solid #42ADE2;
 
 .cou{
     display: flex;
-    width: 70%;
+    width: 75%;
     justify-content: space-between;
 }
 
 .cour{
     display: flex;
-    width: 70%;
+    width: 73%;
     justify-content: space-between;
 }
 
 .cours{
     display: flex;
-    width: 70%;
+    width: 73%;
     justify-content: space-between;
 }
 
@@ -842,6 +842,7 @@ padding-left: 20px;
 .hr{
     width: 95%;
     display: flex;
+    padding-top: 25px;
 }
 
 .assignmentscon{
@@ -1054,25 +1055,25 @@ padding-left: 60px;
 
     .co{
         display: flex;
-        width: 80%;
+        width: 73%;
         justify-content: space-between;
     }
     
     .cou{
         display: flex;
-        width: 52%;
+        width: 75%;
         justify-content: space-between;
     }
     
     .cour{
         display: flex;
-        width: 70%;
+        width: 73%;
         justify-content: space-between;
     }
     
     .cours{
         display: flex;
-        width: 70%;
+        width: 73%;
         justify-content: space-between;
     }
 
@@ -1429,7 +1430,7 @@ padding-left: 60px;
         justify-content: center;
         margin: auto;
         margin-top: 20px;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 500;
         gap: 10px;
         width: 95%;
@@ -1491,19 +1492,19 @@ padding-left: 60px;
     
     .cou{
         display: flex;
-        width: 40%;
+        width: 75%;
         justify-content: space-between;
     }
     
     .cour{
         display: flex;
-        width: 64%;
+        width: 73%;
         justify-content: space-between;
     }
     
     .cours{
         display: flex;
-        width: 63%;
+        width: 73%;
         justify-content: space-between;
     }
     
@@ -1614,7 +1615,7 @@ padding-left: 60px;
     }
     
     #pol{
-        margin-left: -61px;
+        margin-left: -60px;
     }
     
     #poly{
@@ -1643,6 +1644,8 @@ padding-left: 60px;
     .announceassign{
         display: flex;
         margin: 20px 50px 0px 25px;
+        width: 100%;
+        gap: 20px;
     }
     
     .announcements{
@@ -1693,12 +1696,12 @@ padding-left: 60px;
     }
     
     .assignmentscon{
-        width: 465px;
+        width: 450px;
         height: 360px;
     border-radius: 12px;
     border: 1px solid #197ED2;
     margin-top: 45px;
-    margin-left: 60px;
+    margin-left: 0px;
     }
     
     .assignments{
