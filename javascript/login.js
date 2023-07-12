@@ -42,10 +42,6 @@ loginForm.addEventListener('submit', function(event) {
       alert('Login unsuccessful!, please enter the correct username and password');
       button.textContent = 'Log In';
     });
-  } else {
-    console.log('Please enter both email and password.');
-    alert('please enter the correct username and password')
-    button.textContent = 'Log In'
   }
 });
 
