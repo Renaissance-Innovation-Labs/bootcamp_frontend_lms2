@@ -11,9 +11,9 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
     headers: {Authorization: `Bearer ${profile.token}`}
   })
     .then(response => response.json())
-    .then(data => {
-      sessionStorage.setItem("assignment", JSON.stringify(data));
-      displayAssignment(data);
+    .then(res => {
+      sessionStorage.setItem("assignment", JSON.stringify(res));
+      displayAssignment(res);
     })
     .catch(error => {
       console.error("Error fetching assignments:", error);
@@ -36,7 +36,9 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
   let loadState = document.querySelector(".load")
 
   function getAllStack() {
-    loadState.textContent = 'Hold on...'
+    // loadState.textContent = 'Hold on...'
+    // loadState.style.position = 'absolute'
+    // loadState.style.top = '265px'
   fetch("https://lms-boo.onrender.com/stack/")
   .then(response => response.json())
   .then(res => {
@@ -54,10 +56,12 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
   stacks.forEach(stack => {
     const stackContainer = document.querySelector(".stack");
       const stackDiv = document.createElement("div");
+
       stackDiv.classList.add("stack-div");
       const stackLabel = document.createElement("label");
       stackLabel.textContent = stack.name;
       stackLabel.id = "tim"
+
       stackLabel.classList.add("stack");
       const stackSelect = document.createElement("select");
       stackSelect.name = stack.name.toLowerCase();
@@ -83,7 +87,9 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
   function courseAdding(event) {
     const courseCode = event.target.value;
     let courseAdd = document.querySelector(".add-course");
-    courseAdd.textContent = 'Adding...'
+    // courseAdd.textContent = 'Adding...'
+    // courseAdd.style.position = 'absolute'
+    // courseAdd.style.top = '245px'
     // console.log(courseCode);
     fetch(`https://lms-boo.onrender.com/stack/course/${courseCode}`, {
       method: "POST",
@@ -104,7 +110,7 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
 
   function courseDisplay() {
     let load =  document.querySelector(".load-course");
-    load.textContent = "Loading Courses please wait...";
+    load.textContent = "Loading Courses...";
   fetch(`https://lms-boo.onrender.com/stack/course/`, {
     method: "GET",
     headers: {Authorization: `Bearer ${profile.token}`}
@@ -128,34 +134,39 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
   const courseSection = document.querySelector(".mycon");
   courses.forEach(course => {
   const courseDiv = document.createElement("div");
+
   courseDiv.classList.add("mgtback");
   const courseTitle = document.createElement("h6");
   courseTitle.textContent = course.stack;
+
   courseTitle.classList.add("management");
   const assessDiv = document.createElement("div");
+
   assessDiv.classList.add("assess");
   const coursesDiv = document.createElement("div");
+
   coursesDiv.classList.add("promgtcon");
   const courseName = document.createElement("p");
   courseName.textContent = course.title;
+
   courseName.classList.add("p");
-  
   const courseProgress = document.createElement("p");
   courseProgress.textContent = `Progress: 45%`;
-  courseDiv.classList.add("pr");
 
+  courseDiv.classList.add("pr");
   const courseInstructor = document.createElement("p");
   courseInstructor.textContent = `Instructor: Simon Carrel`;
- 
   const btnDiv = document.createElement("div");
+
   btnDiv.classList.add("condel");
   const contBtn = document.createElement("button");
   contBtn.textContent = `Continue`;
+
   contBtn.classList.add("continue");
   const delBtn = document.createElement("button");
   delBtn.textContent = `Delete`;
+
   delBtn.classList.add("delete");
-  
   delBtn.addEventListener("click", () => {
     delBtn.textContent = `Deleting`;
     deleteCourse(course.course_code);
@@ -195,11 +206,4 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
         console.error("Error deleting course:", error);
       });
   }
-  
-  
-  
-  
-  
-  
-  
   
