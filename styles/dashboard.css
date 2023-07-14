@@ -56,7 +56,9 @@
     bottom: 30px;
     left: 120px;
 }
-
+.overviewvaluesmain{
+    padding-right: 15px;
+}
 .side-profile img{
     width: 70px;
     height: 70px;
