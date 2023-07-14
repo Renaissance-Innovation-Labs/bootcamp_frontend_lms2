@@ -3,7 +3,7 @@ let profile = JSON.parse(users);
 
 // Make the profile name dynamic
 document.querySelector('.pro').textContent = `${profile.firstname} ${profile.lastname}`;
-document.querySelector('.hello').textContent = `Hello ${profile.firstname}gitco`;
+document.querySelector('.hello').textContent = `Hello ${profile.firstname}`;
 const assignmentSection = document.querySelector(".assignmentscon");
 
 function courseDisplay() {
