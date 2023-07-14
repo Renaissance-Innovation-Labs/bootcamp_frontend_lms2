@@ -16,26 +16,26 @@
         </div>
             <ul>
               <li>
-                <a href="#" class="da">
+                <a href="../pages/dashboard.html" class="da">
                   <img src="../assets/dashboardassets/Folder.png" alt="dashboard" class="dash">Dashboard
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="../pages/coursemgt.html">
                   <img src="../assets/dashboardassets/Add.png" alt="course management">Course Management
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="../pages/settings.html">
                   <img src="../assets/dashboardassets/Settings.png" alt="Image 3">Settings
                 </a>
               </li>
             </ul>
             <div class="side-profile">
               <img src="../assets/dashboardassets/User.png">
-              <p>Jane Doe</p>
-              <a href="#">
-                <img src="../assets/dashboardassets/Settings.png" alt="log out" class="log-out">Log out
+              <p class="pro">Jane Doe</p>
+              <a href="../index.html">
+                <img src="../assets/dashboardassets/Settings.png" alt="log out" class="log-out" id="logout">Log out
               </a>
             </div>
           </div>
@@ -53,23 +53,23 @@
             <div class="overviewcontent">
             <div class="edit">
                 <img src="../assets/dashboardassets/Editall.png" class="editall"/>
-                <p class="do">Courses in progress</p>
-                <p class="overviewvaluesmain">3</p>
+                <p class="do"><div class="co">Courses in progress</p>
+                <p class="overviewvaluesmain">3</p></div>
             </div>
             <div class="dip">
                 <img src="../assets/dashboardassets/Diplomaall.png" class="diploma"/>
-                <p class="do">Assignment</p>
-                <p class="overviewvaluesdiff">12</p>
+                <p class="do"><div class="cou">Assignment</p>
+                <p class="overviewvaluesdiff">12</div></p>
             </div>
             <div class="done">
                 <img src="../assets/dashboardassets/Doneall.png" class="doneall"/>
-                <p class="do">Completed courses</p>
-                <p class="overviewvalues">1</p>
+                <p class="do"><div class="cour">Completed courses</p>
+                <p class="overviewvalues">1</div></p>
             </div>
             <div class="dipp">
                 <img src="../assets/dashboardassets/Diplomaall.png" class="diploma"/>
-                <p class="do">Certificates earned</p>
-                <p class="overviewvalues">1</p>
+                <p class="do"><div class="cours">Certificates earned</p>
+                <p class="overviewvalues">1</div></p>
             </div>
             </div>
     
@@ -77,6 +77,7 @@
             <p class="upskill">Upskill with our expertly selected courses</p>
             <button class="go">Go to Courses</button>
     
+            <div class="al">
             <div class="allcourses">
             <div class="allcoursescon">
                 <p class="allcoursesheader">Frontend development</p>
@@ -102,7 +103,9 @@
                 <p class="project"><img src="../assets/dashboardassets/Polygonblue.png" class="polygon"/>NodeJs/Express</p>
                 <button class="enroll">Enroll Now</button>
             </div>
+          </div>
             </div> 
+          </div>
     
             <div class="announceassign">
                 <div class="announcementscon">
@@ -133,25 +136,17 @@
                 </div>
     
                 <div class="assignmentscon">
-                    <p class="assignments">Assignments</p>
-                    <p class="assignmentsbig"><img src="../assets/dashboardassets/Document.png" class="doc"/>Developing Restaurant Apis</p>
-                    <p class="assignmentssmall">Backend <span class="time"> 08:00 AM - 23/06</span></p>
-    
-                    <p class="assignmentsbig"><img src="../assets/dashboardassets/Document.png" class="doc"/>Low fidelity frame an e-commerce app</p>
-                    <p class="assignmentssmall">Product Design <span class="time"> 08:00 AM - 27/06</span></p>
-    
-                    <p class="assignmentsbig"><img src="../assets/dashboardassets/Document.png" class="doc"/>Write a case study for user experience</p>
-                    <p class="assignmentssmall">Product Design <span class="time"> 08:00 AM - 01/07</span></p>
+                   <div class="assignments">Assignments </div>
                 </div>
             </div>
         </div>
           <footer class="footer">
             <img src="../assets/dashboardassets/Rectangle 103.png"/>
-            <div class="footericon1"><a href="#"><img src="../assets/dashboardassets/Folder.png" alt="dashboard"></div>
-            <div class="footericon2"><a href="#"><img src="../assets/dashboardassets/Add.png" alt="course management"></div>
-            <div class="footericon3"><a href="#"><img src="../assets/dashboardassets/Settings.png" alt="settings"></div>
-            <div class="footericon4"><a href="#"><img src="../assets/dashboardassets/Onoff.png" alt="log out"></div>
+            <div class="footericon1"><a href="../pages/dashboard.html"><img src="../assets/dashboardassets/Folder.png" alt="dashboard"></div>
+            <div class="footericon2"><a href="../pages/coursemgt.html"><img src="../assets/dashboardassets/Add.png" alt="course management"></div>
+            <div class="footericon3"><a href="../pages/settings.html"><img src="../assets/dashboardassets/Settings.png" alt="settings" id="logout"></div>
+            <div class="footericon4"><a href="../index.html"><img src="../assets/dashboardassets/Onoff.png" alt="log out" id="logout"></div>
           </footer>
 </body>
-<script src="./dashboard.js"></script>
+<script src="../javascript/dashboard.js"></script>
 </html>
