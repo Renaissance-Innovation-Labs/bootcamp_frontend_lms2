@@ -11,9 +11,9 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
     headers: {Authorization: `Bearer ${profile.token}`}
   })
     .then(response => response.json())
-    .then(data => {
-      sessionStorage.setItem("assignment", JSON.stringify(data));
-      displayAssignment(data);
+    .then(res => {
+      sessionStorage.setItem("assignment", JSON.stringify(res));
+      displayAssignment(res);
     })
     .catch(error => {
       console.error("Error fetching assignments:", error);
@@ -36,7 +36,9 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
   let loadState = document.querySelector(".load")
 
   function getAllStack() {
-    loadState.textContent = 'Hold on...'
+    // loadState.textContent = 'Hold on...'
+    // loadState.style.position = 'absolute'
+    // loadState.style.top = '265px'
   fetch("https://lms-boo.onrender.com/stack/")
   .then(response => response.json())
   .then(res => {
@@ -83,7 +85,9 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
   function courseAdding(event) {
     const courseCode = event.target.value;
     let courseAdd = document.querySelector(".add-course");
-    courseAdd.textContent = 'Adding...'
+    // courseAdd.textContent = 'Adding...'
+    // courseAdd.style.position = 'absolute'
+    // courseAdd.style.top = '245px'
     // console.log(courseCode);
     fetch(`https://lms-boo.onrender.com/stack/course/${courseCode}`, {
       method: "POST",
@@ -104,7 +108,7 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
 
   function courseDisplay() {
     let load =  document.querySelector(".load-course");
-    load.textContent = "Loading Courses please wait...";
+    load.textContent = "Loading Courses...";
   fetch(`https://lms-boo.onrender.com/stack/course/`, {
     method: "GET",
     headers: {Authorization: `Bearer ${profile.token}`}
@@ -195,11 +199,4 @@ fetch("https://lms-boo.onrender.com/stack/assignment", {
         console.error("Error deleting course:", error);
       });
   }
-  
-  
-  
-  
-  
-  
-  
   
